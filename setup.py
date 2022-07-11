@@ -7,5 +7,5 @@ setup(name='booklover',
       author='Nick Kalinowski',
       author_email='njk5yr@virginia.edu',
       license='MIT',
-      #packages=['booklover']
+      packages=['booklover']
      )
