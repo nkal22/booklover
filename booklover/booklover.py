@@ -3,10 +3,6 @@
 
 # In[125]:
 
-
-import pandas as pd
-import numpy as np
-
 class BookLover:
     name = "name"
     email = "email"
@@ -54,53 +50,7 @@ class BookLover:
 
 
 
-# In[126]:
-
-
-import unittest
-
-
-
-class BookLoverTestSuite(unittest.TestCase): 
-    
-    # create a book lover
-    reader = BookLover('Nick','nickthebooklover@gmail.com','sports')
-    
-    def test_1_add_book(self):        
-        self.reader.addBook('Great Gatsby',5)
-        expected = ('Great Gatsby', 5)
-        print(self.assertEqual(self.reader.book_list[0], expected))
-    
-    def test_2_add_book_twice(self):
-        self.reader.addBook('Great Gatsby',5)
-        self.reader.addBook('Great Gatsby',5)
-        expected2 = 1
-        print(self.assertEqual(len([item for item in self.reader.book_list if 
-                                    item[0] == "Great Gatsby"]), expected2))
-    
-    def test_3_has_read(self):
-        self.reader.hasRead('Great Gatsby')
-        expected3 = True
-        print(self.assertEqual(self.reader.hasRead('Great Gatsby'), expected3))
-    
-    def test_4_has_read_false(self):
-        self.reader.hasRead('Pride and Prejudice')
-        expected4 = False
-        print(self.assertEqual(self.reader.hasRead('P&P'), expected4))
-    
-    def test_5_num_books(self):
-        self.reader.addBook('Book One', 2)
-        self.reader.addBook('Book Two', 4)
-        expected5 = 3
-        print(self.assertEqual(self.reader.num_books, 3))
-    
-    def test_6_num_fav_books(self):
-        self.reader.favBooks()
-        expected6 = 2
-        print(self.assertEqual(len(self.reader.favBooks()), 2))
-    
-    if __name__ == '__main__':
-        unittest.main(argv=['first-arg-is-ignored'], exit=False)
+# In[126]
 
 
 # In[ ]:
